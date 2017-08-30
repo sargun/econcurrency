@@ -57,5 +57,5 @@ end_per_group(memory_leak_check, Config) ->
     EndMemory =  erlang:memory(total),
     {_, StartMemory} = proplists:lookup(total_memory_start, Config),
     UsedMemory = EndMemory - StartMemory,
-    true = UsedMemory < ((?KEY_COUNT * ?VALUE_SIZE) / 2),
+    true = UsedMemory < ((?KEY_COUNT * (?VALUE_SIZE / 8)) / 2),
     Config.

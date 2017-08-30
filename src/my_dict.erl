@@ -23,8 +23,6 @@
     terminate/2,
     code_change/3]).
 
--define(SERVER, ?MODULE).
-
 -type my_dict() :: pid().
 -type key() :: term().
 -type value() :: term().
